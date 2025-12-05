@@ -1,0 +1,55 @@
+{
+  "info": {
+    "name": "Toko Media - API",
+    "_postman_id": "toko-media-collection",
+    "description": "Requests for the media service API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "List media",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8092/api/media",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8092",
+          "path": ["api","media"]
+        }
+      }
+    },
+    {
+      "name": "Get media by id",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8092/api/media/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8092",
+          "path": ["api","media","1"]
+        }
+      }
+    },
+    {
+      "name": "Upload file",
+      "request": {
+        "method": "POST",
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            { "key": "file", "type": "file" }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:8092/api/media/upload",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8092",
+          "path": ["api","media","upload"]
+        }
+      }
+    }
+  ]
+}
